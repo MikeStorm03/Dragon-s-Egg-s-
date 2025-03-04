@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.msg.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"BlocksMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
