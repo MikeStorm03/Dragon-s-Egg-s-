@@ -3,7 +3,9 @@
 	"package": "com.msg.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"BlocksMixin"
+		"BlocksMixin",
+		"DragonFight",
+		"DragonFightInvoker"
 	],
 	"injectors": {
 		"defaultRequire": 1

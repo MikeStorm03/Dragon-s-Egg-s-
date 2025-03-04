@@ -1,31 +1,26 @@
 {
 	"schemaVersion": 1,
 	"id": "msg",
-	"version": "1.0",
-	"name": "End-Less",
-	"description": "A mod that splits the End into 2 dimensions.",
+	"version": "POTATO 1.0",
+	"name": "Dragon's Egg(s)",
+	"description": "Unlimited Dragon Eggs and add \"generation\" block state to keep track of it.",
 	"authors": [
 		"MikeStorm03"
 	],
 	"contact": {
-		"sources": "https://github.com/MikeStorm03/End-Less"
+		"sources": "https://github.com/MikeStorm03/Dragon-s-Egg-s-"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/End-Less.png",
+	"license": "Mozilla Public License",
+	"icon": "dragon-s-eggs.png",
 	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.msg.EndLess"
-		]
-	},
 	"mixins": [
 		"mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.4",
+		"fabricloader": ">=0.16.7",
+		"minecraft": ">=1.21.2",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": ">=0.106.1"
 	},
 	"suggests": {
 		"another-mod": "*"
