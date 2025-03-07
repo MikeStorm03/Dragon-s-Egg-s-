@@ -18,12 +18,10 @@ import net.minecraft.util.Formatting;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
-import net.minecraft.block.BeehiveBlock;
-
 public class NewDragonEgg extends DragonEggBlock{
 
    public static final MapCodec<DragonEggBlock> CODEC = createCodec(NewDragonEgg::new);
-   public static final int MAX_EGG_CYCLE = 8191; //8191 for POTATO   4194303 for MONSTER
+   public static final int MAX_EGG_CYCLE = 2097151; //8191 for POTATO   2097151 for MONSTER
    public static final IntProperty GENERATION = IntProperty.of("generation", 0, MAX_EGG_CYCLE); 
 
    public MapCodec<DragonEggBlock> getCodec() {
