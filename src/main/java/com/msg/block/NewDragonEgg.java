@@ -21,8 +21,8 @@ import net.minecraft.block.BlockState;
 public class NewDragonEgg extends DragonEggBlock{
 
    public static final MapCodec<DragonEggBlock> CODEC = createCodec(NewDragonEgg::new);
-   public static final int MAX_EGG_CYCLE = 2097151; //8191 for POTATO   2097151 for MONSTER
-   public static final IntProperty GENERATION = IntProperty.of("generation", 0, MAX_EGG_CYCLE); 
+   public static final int MAX_EGG = 1048575; //8191 for POTATO   1048575 for MONSTER
+   public static final IntProperty GENERATION = IntProperty.of("generation", 0, MAX_EGG); 
 
    public MapCodec<DragonEggBlock> getCodec() {
       return CODEC;

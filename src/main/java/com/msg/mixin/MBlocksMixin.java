@@ -15,13 +15,12 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 @Mixin(Blocks.class)
-public class BlocksMixin {
+public class MBlocksMixin {
 
     @Overwrite
     private static Block register(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        if (id == "dragon_egg") {
-            factory = NewDragonEgg::new;
-        }
+        factory = (id == "dragon_egg") ? NewDragonEgg::new : factory;
         return Blocks.register((RegistryKey<Block>)RegistryKey.of(RegistryKeys.BLOCK, Identifier.ofVanilla(id)), factory, settings);
     }
+
 }

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dragon_egg",
+          "functions": [
+            {
+              "function": "minecraft:copy_state",
+              "block": "minecraft:dragon_egg",
+              "properties": [
+                "generation"
+              ]
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/dragon_egg"
+}
