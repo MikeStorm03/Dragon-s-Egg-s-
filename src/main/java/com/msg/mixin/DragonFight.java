@@ -39,8 +39,10 @@ public class DragonFight {
             this.bossBar.setPercent(0.0F);
             this.bossBar.setVisible(false);
             ((DragonFightInvoker) this).invokegenerateEndPortal(previouslyKilled);
-            if (serverState.currentEggNumber < this.world.getGameRules().getInt(MGameRules.MAX_DRAGON_EGG)) {
-                serverState.currentEggNumber = (serverState.currentEggNumber == NewDragonEgg.MAX_EGG) ? NewDragonEgg.MAX_EGG : serverState.currentEggNumber + 1;
+            if (serverState.currentEggNumber < this.world.getGameRules().getInt(MGameRules.MAX_GENRATION)) {
+                serverState.currentEggNumber += 1;
+                this.world.setBlockState(this.world.getTopPosition(Type.MOTION_BLOCKING, EndPortalFeature.offsetOrigin(this.origin)), Blocks.DRAGON_EGG.getDefaultState().with(NewDragonEgg.GENERATION, serverState.currentEggNumber));
+            } else if (this.world.getGameRules().getBoolean(MGameRules.CONTINUE_SPAWN)) {
                 this.world.setBlockState(this.world.getTopPosition(Type.MOTION_BLOCKING, EndPortalFeature.offsetOrigin(this.origin)), Blocks.DRAGON_EGG.getDefaultState().with(NewDragonEgg.GENERATION, serverState.currentEggNumber));
             }
             
