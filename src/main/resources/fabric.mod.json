@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "dragon-s-eggs",
-	"version": "1.1.0",
+	"version": "${version}",
 	"name": "Dragon's Egg(s)",
 	"description": "Unlimited Dragon Eggs and add \"generation\" block state to keep track of it.",
 	"authors": [
