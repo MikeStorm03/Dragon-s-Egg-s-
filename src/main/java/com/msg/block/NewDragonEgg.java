@@ -6,11 +6,11 @@ import java.util.Objects;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.block.DragonEggBlock;
+import net.minecraft.client.item.TooltipType;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.BlockStateComponent;
-import net.minecraft.item.Item;
+import net.minecraft.item.Item.TooltipContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.text.Text;
@@ -18,10 +18,10 @@ import net.minecraft.util.Formatting;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
-public class NewDragonEgg extends DragonEggBlock{
+public class NewDragonEgg extends DragonEggBlock {
 
    public static final MapCodec<DragonEggBlock> CODEC = createCodec(NewDragonEgg::new);
-   public static final int MAX_EGG = 1048575; // 1048575 for release
+   public static final int MAX_EGG = 100; // 1048575 for release
    public static final IntProperty GENERATION = IntProperty.of("generation", 0, MAX_EGG); 
 
    public MapCodec<DragonEggBlock> getCodec() {
@@ -38,8 +38,8 @@ public class NewDragonEgg extends DragonEggBlock{
       builder.add(GENERATION);
    }
 
-   public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-      super.appendTooltip(stack, context, tooltip, options);
+   @Override
+   public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
       BlockStateComponent blockStateComponent = (BlockStateComponent)stack.getOrDefault(DataComponentTypes.BLOCK_STATE, BlockStateComponent.DEFAULT);
       int i = (Integer)Objects.requireNonNullElse((Integer)blockStateComponent.getValue(GENERATION), 0);
       tooltip.add(Text.translatable("dragon_egg.generation", new Object[]{i}).formatted(Formatting.GOLD));
