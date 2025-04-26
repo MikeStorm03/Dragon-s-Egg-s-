@@ -37,7 +37,8 @@ public class NewDragonEgg extends DragonEggBlock{
    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
       builder.add(GENERATION);
    }
-
+   
+   @Override
    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
       super.appendTooltip(stack, context, tooltip, options);
       BlockStateComponent blockStateComponent = (BlockStateComponent)stack.getOrDefault(DataComponentTypes.BLOCK_STATE, BlockStateComponent.DEFAULT);
