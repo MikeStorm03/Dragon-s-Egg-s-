@@ -5,7 +5,8 @@
 	"mixins": [
 		"MBlocksMixin",
 		"DragonFight",
-		"DragonFightInvoker"
+		"DragonFightInvoker",
+		"FallingBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

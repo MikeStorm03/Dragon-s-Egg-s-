@@ -21,7 +21,7 @@ import net.minecraft.block.BlockState;
 public class NewDragonEgg extends DragonEggBlock {
 
    public static final MapCodec<DragonEggBlock> CODEC = createCodec(NewDragonEgg::new);
-   public static final int MAX_EGG = 100; // 1048575 for release
+   public static final int MAX_EGG = 1048575; // 1048575 for release
    public static final IntProperty GENERATION = IntProperty.of("generation", 0, MAX_EGG); 
 
    public MapCodec<DragonEggBlock> getCodec() {
