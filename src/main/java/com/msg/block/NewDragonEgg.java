@@ -1,20 +1,10 @@
 package com.msg.block;
 
-import java.util.List;
-import java.util.Objects;
-
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.block.DragonEggBlock;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.BlockStateComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 
@@ -37,13 +27,4 @@ public class NewDragonEgg extends DragonEggBlock{
    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
       builder.add(GENERATION);
    }
-   
-   @Override
-   public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-      super.appendTooltip(stack, context, tooltip, options);
-      BlockStateComponent blockStateComponent = (BlockStateComponent)stack.getOrDefault(DataComponentTypes.BLOCK_STATE, BlockStateComponent.DEFAULT);
-      int i = (Integer)Objects.requireNonNullElse((Integer)blockStateComponent.getValue(GENERATION), 0);
-      tooltip.add(Text.translatable("dragon_egg.generation", new Object[]{i}).formatted(Formatting.GOLD));
-   }
-
 }
