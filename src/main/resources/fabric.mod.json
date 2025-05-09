@@ -19,14 +19,13 @@
 		]
 	},
 	"mixins": [
-		"mixins.json"
+		"dragon-s-eggs.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.7",
 		"minecraft": ">=1.21 <1.21.2",
 		"java": ">=21",
-		"fabric-api": ">=0.102.0",
-		"ferritecore": "*"
+		"fabric-api": ">=0.102.0"
 	},
 	"breaks" : {
 		"infinite-dragon-eggs": "*"
