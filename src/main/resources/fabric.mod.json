@@ -19,7 +19,7 @@
 		]
 	},
 	"mixins": [
-		"mixins.json"
+		"dragon-s-eggs.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.7",
