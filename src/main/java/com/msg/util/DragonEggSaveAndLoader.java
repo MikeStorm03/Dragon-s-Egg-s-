@@ -1,48 +1,42 @@
 package com.msg.util;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.msg.DragonsEggS;
 
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.PersistentState;
+import net.minecraft.world.PersistentStateType;
 import net.minecraft.world.World;
 
 public class DragonEggSaveAndLoader extends PersistentState {
     public Integer currentEggNumber = 0;
-    
-    @Override
-    public NbtCompound writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
-        nbt.putInt("currentEggNumber", currentEggNumber);
-        return nbt;
+
+    public DragonEggSaveAndLoader(Integer currentEggNumber) {
+        this.currentEggNumber = currentEggNumber;
     }
 
-    public static DragonEggSaveAndLoader createFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
-        DragonEggSaveAndLoader state = new DragonEggSaveAndLoader();
-        state.currentEggNumber = tag.getInt("currentEggNumber");
-        return state;
-    }
- 
+    public static final Codec<DragonEggSaveAndLoader> CODEC = RecordCodecBuilder.create(
+        instance -> instance.group(
+            Codec.INT.fieldOf("currentEggNumber").forGetter(state -> state.currentEggNumber)
+        ).apply(instance, DragonEggSaveAndLoader::new)
+    );
+
     public static DragonEggSaveAndLoader createNew() {
-        DragonEggSaveAndLoader state = new DragonEggSaveAndLoader();
-        state.currentEggNumber = 0;
+        DragonEggSaveAndLoader state = new DragonEggSaveAndLoader(0);
         return state;
     }
 
-    private static final Type<DragonEggSaveAndLoader> type = new Type<>(
+    private static final PersistentStateType<DragonEggSaveAndLoader> type = new PersistentStateType<>(
+        DragonsEggS.MOD_ID,
         DragonEggSaveAndLoader::createNew,
-        DragonEggSaveAndLoader::createFromNbt,
+        CODEC,
         null
     );
  
     public static DragonEggSaveAndLoader getServerState(MinecraftServer server) {
-        ServerWorld serverWorld = server.getWorld(World.OVERWORLD);
-        assert serverWorld != null;
-        DragonEggSaveAndLoader state = serverWorld.getPersistentStateManager().getOrCreate(type, DragonsEggS.MOD_ID);
-
+        DragonEggSaveAndLoader state = server.getWorld(World.OVERWORLD).getPersistentStateManager().getOrCreate(type);
         state.markDirty();
- 
         return state;
     }
 }
