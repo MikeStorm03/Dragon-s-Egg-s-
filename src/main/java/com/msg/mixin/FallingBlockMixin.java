@@ -22,7 +22,7 @@ import net.minecraft.state.property.Property;
 @Mixin(FallingBlockEntity.class)
 public class FallingBlockMixin {
 
-    @Shadow private BlockState block;
+    @Shadow private BlockState blockState;
 
     @Redirect(method = "tick()V",
             at = @At(value = "INVOKE",
@@ -31,11 +31,9 @@ public class FallingBlockMixin {
         ItemStack stack = new ItemStack(item);
         if (stack.isOf(Blocks.DRAGON_EGG.asItem())) {
             Map<String, String> props = new HashMap<>();
-            for (Property<?> property : block.getProperties()) {
-                if (property.getValues() instanceof Comparable<?>) {
-                    Comparable<?> value = (Comparable<?>) block.get(property);
-                    props.put((property).getName(), value.toString());
-                }
+            for (Property<?> property : blockState.getProperties()) {
+                Comparable<?> value = (Comparable<?>) blockState.get(property);
+                props.put((property).getName(), value.toString());
             }
             stack.set(DataComponentTypes.BLOCK_STATE, new BlockStateComponent(props));
         }
