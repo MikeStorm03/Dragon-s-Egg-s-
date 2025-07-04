@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
-import com.msg.block.NewDragonEgg;
+import com.msg.util.Consants;
 import com.msg.util.DragonEggSaveAndLoader;
 import com.msg.world.MGameRules;
 
@@ -41,9 +41,9 @@ public class DragonFight {
             ((DragonFightInvoker) this).invokegenerateEndPortal(previouslyKilled);
             if (serverState.currentEggNumber < this.world.getGameRules().getInt(MGameRules.MAX_GENRATION)) {
                 serverState.currentEggNumber += 1;
-                this.world.setBlockState(this.world.getTopPosition(Type.MOTION_BLOCKING, EndPortalFeature.offsetOrigin(this.origin)), Blocks.DRAGON_EGG.getDefaultState().with(NewDragonEgg.GENERATION, serverState.currentEggNumber));
+                this.world.setBlockState(this.world.getTopPosition(Type.MOTION_BLOCKING, EndPortalFeature.offsetOrigin(this.origin)), Blocks.DRAGON_EGG.getDefaultState().with(Consants.GENERATION, serverState.currentEggNumber));
             } else if (this.world.getGameRules().getBoolean(MGameRules.CONTINUE_SPAWN)) {
-                this.world.setBlockState(this.world.getTopPosition(Type.MOTION_BLOCKING, EndPortalFeature.offsetOrigin(this.origin)), Blocks.DRAGON_EGG.getDefaultState().with(NewDragonEgg.GENERATION, serverState.currentEggNumber));
+                this.world.setBlockState(this.world.getTopPosition(Type.MOTION_BLOCKING, EndPortalFeature.offsetOrigin(this.origin)), Blocks.DRAGON_EGG.getDefaultState().with(Consants.GENERATION, serverState.currentEggNumber));
             }
             
             this.previouslyKilled = true;
