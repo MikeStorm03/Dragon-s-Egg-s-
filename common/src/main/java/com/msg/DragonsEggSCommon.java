@@ -1,8 +1,5 @@
 package com.msg;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -14,8 +11,6 @@ import net.minecraft.resources.ResourceLocation;
 // common compatible binaries. This means common code can not directly use loader specific concepts such as Forge events
 // however it will be compatible with all supported mod loaders.
 public class DragonsEggSCommon {
-
-	public static final Logger LOGGER = LoggerFactory.getLogger("Dragon's Egg(S)");
 
     public record CurrentEgg(Integer current_egg) implements CustomPacketPayload {
 		public static final ResourceLocation CURRENT_EGG = ResourceLocation.fromNamespaceAndPath("dragon-egg-s", "current_egg");

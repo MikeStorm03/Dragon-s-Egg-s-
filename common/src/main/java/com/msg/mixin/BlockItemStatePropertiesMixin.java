@@ -25,8 +25,10 @@ public class BlockItemStatePropertiesMixin {
         BlockItemStateProperties props = dataComponentGetter.get(DataComponents.BLOCK_STATE);
         if (props != null) {
             Integer generation = props.get(DragonsEggSConstants.GENERATION);
-            consumer.accept(Component.translatable("dragon_egg.generation", generation != null ? generation : 0)
-                    .withStyle(ChatFormatting.GOLD));
+            if (generation != null){
+                consumer.accept(Component.translatable("dragon_egg.generation",  generation)
+                        .withStyle(ChatFormatting.GOLD));
+            }
         }
     }
 }
