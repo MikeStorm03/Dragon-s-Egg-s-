@@ -5,13 +5,10 @@
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "MBlocksMixin",
+    "DragonEggMixin",
     "FallingBlockMixin",
-    "GamerulesAccessor",
-    "IntegerValueAccessor",
-    "BooleanValueAccessor",
     "DragonFightInvoker",
-    "DragonFightMixin"
+    "BlockItemStatePropertiesMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -8,15 +8,15 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://github.com/MikeStorm03/Dragon-s-Egg-s-",
+        "sources": "https://modrinth.com/mod/dragons-egg(s)"
     },
     "license": "${license}",
     "icon": "assets/${mod_id}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.msg.DragonsEggS"
+            "com.msg.DragonsEggSFabric"
         ]
     },
     "mixins": [

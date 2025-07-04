@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
 import com.msg.DragonEggSaveAndLoader;
-import com.msg.block.NewDragonEgg;
-import com.msg.world.rules.MGameRules;
+import com.msg.DragonsEggSConstants;
+import com.msg.DragonsEggSNeoForge;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.MinecraftServer;
@@ -29,7 +29,7 @@ public class DragonFightMixin {
     @Shadow private ServerBossEvent dragonEvent;
     @Shadow private ServerLevel level;
     @Shadow private BlockPos origin;
-
+    
     @Overwrite
     public void setDragonKilled(EnderDragon dragon) {
         if (dragon.getUUID().equals(this.dragonUUID)) {
@@ -39,16 +39,15 @@ public class DragonFightMixin {
             this.dragonEvent.setProgress(0.0F);
             this.dragonEvent.setVisible(false);
             ((DragonFightInvoker) this).invokegenerateEndPortal(previouslyKilled);
-            if (serverState.currentEggNumber < this.level.getGameRules().getInt(MGameRules.MAX_GENRATION)) {
+            if (serverState.currentEggNumber < this.level.getGameRules().getInt(DragonsEggSNeoForge.MAX_GENRATION)) {
                 serverState.currentEggNumber += 1;
-                this.level.setBlockAndUpdate(this.level.getHeightmapPos(Types.MOTION_BLOCKING, EndPodiumFeature.getLocation(this.origin)), Blocks.DRAGON_EGG.defaultBlockState().setValue(NewDragonEgg.GENERATION, serverState.currentEggNumber));
+                this.level.setBlockAndUpdate(this.level.getHeightmapPos(Types.MOTION_BLOCKING, EndPodiumFeature.getLocation(this.origin)), Blocks.DRAGON_EGG.defaultBlockState().setValue(DragonsEggSConstants.GENERATION, serverState.currentEggNumber));
+            } else if (this.level.getGameRules().getBoolean(DragonsEggSNeoForge.CONTINUE_SPAWN)) {
+                this.level.setBlockAndUpdate(this.level.getHeightmapPos(Types.MOTION_BLOCKING, EndPodiumFeature.getLocation(this.origin)), Blocks.DRAGON_EGG.defaultBlockState().setValue(DragonsEggSConstants.GENERATION, serverState.currentEggNumber));
             }
-            else if (this.level.getGameRules().getBoolean(MGameRules.CONTINUE_SPAWN)) {
-                this.level.setBlockAndUpdate(this.level.getHeightmapPos(Types.MOTION_BLOCKING, EndPodiumFeature.getLocation(this.origin)), Blocks.DRAGON_EGG.defaultBlockState().setValue(NewDragonEgg.GENERATION, serverState.currentEggNumber));
-            }
+            
             this.previouslyKilled = true;
             this.dragonKilled = true;
         }
     }
-
 }

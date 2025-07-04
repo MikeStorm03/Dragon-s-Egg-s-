@@ -3,11 +3,6 @@ package com.msg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.msg.platform.Services;
-import com.msg.world.rules.MGameRules;
-
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -35,16 +30,5 @@ public class DragonsEggSCommon {
 		}
 	}
 
-    public static void init() {
-
-        DragonsEggSConstants.LOG.info("Dragon's Egg(S) is currently on {} in {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
-        // DragonsEggSConstants.LOG.info("The ID for diamonds is {}", BuiltInRegistries.ITEM.getKey(Items.DIAMOND));
-
-		MGameRules.initialize();
-
-        if (Services.PLATFORM.isModLoaded(DragonsEggSConstants.ID)) {
-
-            DragonsEggSConstants.LOG.info("Dragon's Egg(S) loaded.");
-        }
-    }
+    public static void init() {}
 }
