@@ -6,7 +6,8 @@
 		"DragonEggMixin",
 		"DragonFight",
 		"DragonFightInvoker",
-		"FallingBlockMixin"
+		"FallingBlockMixin",
+		"ItemsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
