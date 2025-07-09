@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.msg.mixin",
+  "refmap": "${mod_id}.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DragonEggMixin",
+    "FallingBlockMixin",
+    "DragonFightInvoker",
+    "ItemsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
