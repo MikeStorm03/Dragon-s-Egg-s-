@@ -31,11 +31,6 @@ public class DragonEggMixin extends Block{
         super(properties);
     }
 
-    @Inject(method = "<init>(Lnet/minecraft/world/level/block/state/BlockBehaviour/Properties;I)V", at = @At("TAIL"))
-    public void inject(Properties properties, CallbackInfo ci) {
-        registerDefaultState(defaultBlockState().setValue(DragonsEggSConstants.GENERATION, 0));
-    }
-
     @Unique
     private static final int MAX_EGG = DragonsEggSConstants.MAX_EGG; 
     @Unique
