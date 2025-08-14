@@ -9,7 +9,8 @@
     "FallingBlockMixin",
     "DragonFightInvoker",
     "ItemsMixin",
-    "BlockItemStatePropertiesMixin"
+    "BlockItemStatePropertiesMixin",  
+    "DragonFightMixin"
   ],
   "injectors": {
     "defaultRequire": 1
