@@ -3,7 +3,7 @@ package com.msg.platform;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 
-public class NeoForgePlatformHelper implements IPlatformHelper {
+public class DragonsEggSNeoForgePlatformHelper implements DragonsEggSPlatformHelper {
 
     @Override
     public String getPlatformName() {
