@@ -3,7 +3,7 @@ package com.msg.platform;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
 
-public class FabricPlatformHelper implements IPlatformHelper {
+public class DragonsEggSFabricPlatformHelper implements DragonsEggSPlatformHelper {
 
     @Override
     public String getPlatformName() {
