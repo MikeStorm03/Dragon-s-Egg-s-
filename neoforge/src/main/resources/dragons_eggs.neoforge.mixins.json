@@ -4,9 +4,7 @@
   "package": "com.msg.dragons_eggs.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "DragonFightMixin"
-  ],
+  "mixins": [],
   "client": [],
   "server": [],
   "injectors": {

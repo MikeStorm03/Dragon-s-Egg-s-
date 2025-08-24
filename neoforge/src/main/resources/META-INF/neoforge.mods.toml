@@ -31,7 +31,7 @@ side = "BOTH"
 [[dependencies.${mod_id}]]
 modId = "ferritecore"
 type="required"
-versionRange = ""
+versionRange = "[0,)"
 ordering = "NONE"
 side = "BOTH"
 
