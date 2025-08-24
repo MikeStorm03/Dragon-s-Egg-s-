@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.msg.DragonsEggSFabric"
+            "com.msg.dragons_eggs.DragonsEggSFabric"
         ]
     },
     "mixins": [

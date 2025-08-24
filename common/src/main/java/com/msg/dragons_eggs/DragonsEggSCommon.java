@@ -1,7 +1,7 @@
-package com.msg;
+package com.msg.dragons_eggs;
 
-import com.msg.platform.Services;
-import com.msg.server.ServerSideCommon;
+import com.msg.dragons_eggs.platform.Services;
+import com.msg.dragons_eggs.server.ServerSideCommon;
 
 public class DragonsEggSCommon {
 

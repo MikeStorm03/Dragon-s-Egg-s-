@@ -1,4 +1,4 @@
-package com.msg.ulti;
+package com.msg.dragons_eggs.ulti;
 
 import net.minecraft.world.level.GameRules;
 

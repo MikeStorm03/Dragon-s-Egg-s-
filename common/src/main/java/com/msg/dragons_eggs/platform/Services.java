@@ -1,6 +1,6 @@
-package com.msg.platform;
+package com.msg.dragons_eggs.platform;
 
-import com.msg.DragonsEggSConstants;
+import com.msg.dragons_eggs.DragonsEggSConstants;
 
 import java.util.ServiceLoader;
 

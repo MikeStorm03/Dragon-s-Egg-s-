@@ -1,6 +1,6 @@
-package com.msg;
+package com.msg.dragons_eggs;
 
-import com.msg.ulti.DragonsEggSGameRule;
+import com.msg.dragons_eggs.ulti.DragonsEggSGameRule;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;

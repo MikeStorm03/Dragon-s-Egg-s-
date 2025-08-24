@@ -1,4 +1,4 @@
-package com.msg.server;
+package com.msg.dragons_eggs.server;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
