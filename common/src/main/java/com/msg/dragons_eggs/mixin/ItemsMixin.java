@@ -1,11 +1,11 @@
-package com.msg.mixin;
+package com.msg.dragons_eggs.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
-import com.msg.DragonsEggSConstants;
+import com.msg.dragons_eggs.DragonsEggSConstants;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;

@@ -1,4 +1,4 @@
-    package com.msg.mixin;
+    package com.msg.dragons_eggs.mixin;
 
 import java.util.List;
 import java.util.Objects;
@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.msg.DragonsEggSConstants;
+import com.msg.dragons_eggs.DragonsEggSConstants;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;

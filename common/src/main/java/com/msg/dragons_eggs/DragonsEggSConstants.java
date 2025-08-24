@@ -1,4 +1,4 @@
-package com.msg;
+package com.msg.dragons_eggs;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

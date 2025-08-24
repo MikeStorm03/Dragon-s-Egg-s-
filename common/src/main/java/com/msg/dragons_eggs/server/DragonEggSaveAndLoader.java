@@ -1,6 +1,6 @@
-package com.msg.server;
+package com.msg.dragons_eggs.server;
 
-import com.msg.DragonsEggSConstants;
+import com.msg.dragons_eggs.DragonsEggSConstants;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;

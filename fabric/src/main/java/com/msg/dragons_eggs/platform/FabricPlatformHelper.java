@@ -1,9 +1,9 @@
-package com.msg.platform;
+package com.msg.dragons_eggs.platform;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
 
-public class DragonsEggSFabricPlatformHelper implements DragonsEggSPlatformHelper {
+public class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
     public String getPlatformName() {

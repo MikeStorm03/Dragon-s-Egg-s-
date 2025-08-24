@@ -1,6 +1,6 @@
-package com.msg.platform;
+package com.msg.dragons_eggs.platform;
 
-public interface DragonsEggSPlatformHelper {
+public interface IPlatformHelper {
 
     /**
      * Gets the name of the current platform
