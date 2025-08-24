@@ -1,6 +1,6 @@
-package com.msg;
+package com.msg.dragons_eggs;
 
-import com.msg.ulti.DragonsEggSGameRule;
+import com.msg.dragons_eggs.ulti.DragonsEggSGameRule;
 
 import net.minecraft.world.level.GameRules;
 import net.neoforged.bus.api.IEventBus;
@@ -8,8 +8,6 @@ import net.neoforged.fml.common.Mod;
 
 @Mod(DragonsEggSConstants.ID)
 public class DragonsEggSNeoForge {
-
-
 
     public DragonsEggSNeoForge(IEventBus eventBus) {
 

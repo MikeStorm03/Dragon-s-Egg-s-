@@ -1,8 +1,8 @@
-package com.msg.server;
+package com.msg.dragons_eggs.server;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.msg.DragonsEggSConstants;
+import com.msg.dragons_eggs.DragonsEggSConstants;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.Level;

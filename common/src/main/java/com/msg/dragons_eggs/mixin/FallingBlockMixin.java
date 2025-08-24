@@ -1,4 +1,4 @@
-package com.msg.mixin;
+package com.msg.dragons_eggs.mixin;
 
 import java.util.HashMap;
 import java.util.Map;

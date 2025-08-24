@@ -1,4 +1,4 @@
-package com.msg.platform;
+package com.msg.dragons_eggs.platform;
 
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;

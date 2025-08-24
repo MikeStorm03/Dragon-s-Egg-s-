@@ -1,4 +1,4 @@
-package com.msg.mixin;
+package com.msg.dragons_eggs.mixin;
 
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -6,9 +6,9 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import com.msg.DragonsEggSConstants;
-import com.msg.server.DragonEggSaveAndLoader;
-import com.msg.ulti.DragonsEggSGameRule;
+import com.msg.dragons_eggs.DragonsEggSConstants;
+import com.msg.dragons_eggs.server.DragonEggSaveAndLoader;
+import com.msg.dragons_eggs.ulti.DragonsEggSGameRule;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

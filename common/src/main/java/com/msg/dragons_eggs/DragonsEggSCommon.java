@@ -1,7 +1,7 @@
-package com.msg;
+package com.msg.dragons_eggs;
 
-import com.msg.platform.Services;
-import com.msg.server.ServerSideCommon;
+import com.msg.dragons_eggs.platform.Services;
+import com.msg.dragons_eggs.server.ServerSideCommon;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide
