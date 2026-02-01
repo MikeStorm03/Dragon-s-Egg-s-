@@ -3,7 +3,7 @@ package com.msg.dragons_eggs.mixin;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
-import com.msg.dragons_eggs.DragonsEggSConstants;
+import com.msg.dragons_eggs.Constants;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DragonEggBlock;
@@ -19,9 +19,9 @@ public class DragonEggMixin extends Block{
     }
 
     @Unique
-    private static final int MAX_EGG = DragonsEggSConstants.MAX_EGG; 
+    private static final int MAX_EGG = Constants.MAX_EGG; 
     @Unique
-    private static final IntegerProperty GENERATION = DragonsEggSConstants.GENERATION;
+    private static final IntegerProperty GENERATION = Constants.GENERATION;
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

@@ -1,5 +1,6 @@
 {
     "dragon_egg.generation": "Generation %s",
     "gamerule.maxEggsGeneration": "Max Dragon Egg that can be generate.",
-    "gamerule.continueWhenMax": "Whether it continue generate the dragon egg after hit the maximum maxEggsGeneration."
+    "gamerule.continueWhenMax": "Whether it continue generate the dragon egg after hit the maximum maxEggsGeneration.",
+    "current_dragons_egg_generation": "The current Dragon's Egg Geneneration is %s"
 }

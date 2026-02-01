@@ -22,3 +22,7 @@ build
 eclipse
 run
 runs
+
+# Local Folder icon
+desktop.ini
+dragons_eggs.ico

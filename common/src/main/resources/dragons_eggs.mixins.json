@@ -6,11 +6,15 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "DragonEggMixin",
-    "FallingBlockMixin",
-    "DragonFightInvoker",
     "ItemsMixin",
-    "BlockItemStatePropertiesMixin",  
-    "DragonFightMixin"
+    "DragonFightMixin",
+    "FallingBlockMixin"
+  ],
+  "server": [
+    "DragonFightInvoker"
+  ],
+  "client": [
+    "BlockItemStatePropertiesMixin"
   ],
   "injectors": {
     "defaultRequire": 1

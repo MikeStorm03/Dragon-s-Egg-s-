@@ -2,7 +2,7 @@ package com.msg.dragons_eggs.server;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.msg.dragons_eggs.DragonsEggSConstants;
+import com.msg.dragons_eggs.Constants;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.Level;
@@ -29,7 +29,7 @@ public class DragonEggSaveAndLoader extends SavedData {
     }
 
     private static final SavedDataType<DragonEggSaveAndLoader> type = new SavedDataType<>(
-        DragonsEggSConstants.ID,
+        Constants.ID,
         DragonEggSaveAndLoader::createNew,
         CODEC,
         null

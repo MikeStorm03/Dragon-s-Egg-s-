@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.msg.dragons_eggs.DragonsEggSConstants;
+import com.msg.dragons_eggs.Constants;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponentGetter;
@@ -24,7 +24,7 @@ public class BlockItemStatePropertiesMixin {
             DataComponentGetter dataComponentGetter, CallbackInfo ci) {
         BlockItemStateProperties props = dataComponentGetter.get(DataComponents.BLOCK_STATE);
         if (props != null) {
-            Integer generation = props.get(DragonsEggSConstants.GENERATION);
+            Integer generation = props.get(Constants.GENERATION);
             if (generation != null){
                 consumer.accept(Component.translatable("dragon_egg.generation",  generation)
                         .withStyle(ChatFormatting.GOLD));

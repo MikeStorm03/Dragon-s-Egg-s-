@@ -1,6 +1,6 @@
 package com.msg.dragons_eggs.platform;
 
-import com.msg.dragons_eggs.DragonsEggSConstants;
+import com.msg.dragons_eggs.Constants;
 
 import java.util.ServiceLoader;
 
@@ -23,7 +23,7 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        DragonsEggSConstants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }

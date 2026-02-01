@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation "maven.modrinth:ferrite-core:8.0.0-neoforge"
+    implementation "maven.modrinth:ferrite-core:8.0.3-neoforge"
 }
 
 neoForge {

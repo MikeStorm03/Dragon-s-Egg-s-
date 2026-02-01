@@ -8,6 +8,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+import com.msg.dragons_eggs.Constants;
+
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.item.FallingBlockEntity;
@@ -33,10 +35,7 @@ public class FallingBlockMixin {
         
         if (stack.is(Blocks.DRAGON_EGG.asItem())) {
             Map<String, String> props = new HashMap<>();
-            for (Property<?> property : blockState.getProperties()) {
-                Comparable<?> value = (Comparable<?>) blockState.getValue(property);
-                props.put((property).getName(), value.toString());
-            }
+            for (Property<?> property : blockState.getProperties()) props.put((property).getName(),  blockState.getValue(property).toString());
             stack.set(DataComponents.BLOCK_STATE, new BlockItemStateProperties(props));
         }
 

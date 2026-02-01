@@ -3,9 +3,10 @@ package com.msg.dragons_eggs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
-public class DragonsEggSConstants {
+public class Constants {
 
 	public static final String NAMESPACE = "msg";
 	public static final String ID = "dragons_eggs";
@@ -13,4 +14,5 @@ public class DragonsEggSConstants {
     public static final int MAX_EGG = 1048575;
     public static final IntegerProperty GENERATION = IntegerProperty.create("generation", 0, MAX_EGG); 
 	public static final Logger LOG = LoggerFactory.getLogger(NAME);
+	// public static final Identifier modPacket = Identifier.fromNamespaceAndPath(NAMESPACE, "playersHasMod");
 }
