@@ -69,9 +69,9 @@ public class Common {
                                             FeatureFlagSet.of()));
 	}
 	public static LiteralArgumentBuilder<CommandSourceStack> registerCommand() {
-		return Commands.literal("currentDragonEggGeneration")
+		return Commands.literal("latest_egg_generation")
             .executes(context -> {
-                context.getSource().sendSuccess(() -> Component.translatable("current_dragons_egg_generation", DragonEggSaveAndLoader.getServerState(context.getSource().getServer()).currentEggNumber), false);
+                context.getSource().sendSuccess(() -> Component.translatable("latest_dragons_egg_generation", DragonEggSaveAndLoader.getServerState(context.getSource().getServer()).currentEggNumber), false);
                 return 1;
             });
 	}
